@@ -120,7 +120,7 @@ module "cko-devops-challenge-rds" {
              SECONDS_UNTIL_AUTO_PAUSE  = 300
 ```
 ## Test quality
-I've recorded the POC. The video is lengthy and uploaded via git LFS (~ 22 mins). It takes a longer time to destroy than create given the fact that I've made the autoscaling depend on the rds cluster.
+I've recorded the POC. The video is lengthy and uploaded via git LFS (~ 22 mins) on another repository to keep this one lean for the cloning. It takes a longer time to destroy than create given the fact that I've made the autoscaling depend on the rds cluster.
 
 At 10:42 I've terminated an instance in the ASG since it was unhealthy. A new instance was created and came up healthy showing that the ASG works.
 
