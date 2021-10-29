@@ -124,7 +124,7 @@ I've recorded the POC. The video is lengthy and uploaded via git LFS (~ 22 mins)
 
 At 10:42 I've terminated an instance in the ASG since it was unhealthy. A new instance was created and came up healthy showing that the ASG works.
 
-https://github.com/taranveer-tengurchittoo/taranveer-tengurchittoo/blob/master/demo-test.mov
+https://github.com/taranveer-tengurchittoo/taranveer-tengurchittoo/raw/master/demo-test.mov
 ## Ability to go the extra mile
 ### Monitoring/Alerting
 1. Detailed monitoring has been enabled for the ASG and RDS
