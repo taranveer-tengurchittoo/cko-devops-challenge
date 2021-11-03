@@ -169,4 +169,4 @@ Given time, I would
 
 ### Network diagram
 
-Internet facing ELB in 3 AZs --> 2 EC2 ASGs spanning 3 AZs in private subnets --> Aurora Serverless in private subnet
+Internet facing ELB in 3 AZs --> 2 EC2 ASGs (blue/green) spanning 3 AZs in private subnets --> Aurora Serverless in private subnets
