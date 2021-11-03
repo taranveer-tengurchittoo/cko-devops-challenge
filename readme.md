@@ -74,7 +74,7 @@ To provide an HA scalable solution for a 3-tier web application, I have chosen
 | Internet Gateway | Attached to the VPC and allows NAT to route to the internt | Allows NAT Gateway to reach internet|
 | KMS | N/A | Custom CMK to encrypt the database and EC2 volumes|
 | AWS Secrets | N/A | The Aurora cluster needs to be built with a password and this will be stored in the terraform state. To prevent any security compromise, the bootstrap script will create an AWS secret, generate a new password for the database administrator user in memory and store it on the AWS secrets. The userdata for the ASG has a function that allows the first instance that connects to the database to reset the administrator password with the one stored on the secret. All subsequent instances use the password stored in the secret to to connect to the database|
-| VPC | /16 is a bit overkill, a  | Custom VPC to segragate environment from anything in the default VPC|
+| VPC | /16 is a bit overkill, a /23 should be sufficient  | Custom VPC to segragate environment from anything in the default VPC|
 | Database Subnet | 1 private /28 in each AZ for database  | Maximum reader nodes is 15 + 1 master node. /28 provides 33 usable addresses |
 | Application Subnet | 1 private /27 in each AZ for ASGs  | 81 usable addresses allowing 40 instances in each ASG |
 | Application Subnet | 1 private /28 in each AZ for ELBs  | 33 usable addresses largely enough for ELB |
