@@ -54,7 +54,7 @@ bash bootstrap.sh -d
 
 ## Choices | Self evaluation on the exercise
 ### Understanding of the exercise
-For the purposes of building a basic website with text and an image, I would have personally gone for an AWS CloudFront with an S3 as backend. It is scalable with far less operational overhead, however it would not not be fit for this exercise since most of the criteria on which I am supposed to be assessed would be missing. The reason for this choice is that using an S3 bucket alone with the hosting solution would incurr higher costs in the long run since web resources would need to be fetched every time a page is loaded. Having a CDN in front of the S3 bucket would decrease costs considerably by caching content and decreasing the number of GET requests on the bucket. This would also improving the site's TTFB and overall performance. AWS CDN benefits from AWS shield DDOS protection, TLS offloading and would also allow the use of the AWS WAF.
+For the purposes of building a basic website with text and an image, I would have personally gone for an AWS CloudFront with an S3 as backend. It is scalable with far less operational overhead, however it would not be fit for this exercise since most of the criteria on which I am supposed to be assessed would be missing. The reason for this choice is that using an S3 bucket alone with the hosting solution would incurr higher costs in the long run since web resources would need to be fetched every time a page is loaded. Having a CDN in front of the S3 bucket would decrease costs considerably by caching content and decreasing the number of GET requests on the bucket. This would also improve the site's TTFB and overall performance. AWS CDN benefits from AWS shield DDOS protection, TLS offloading and would also allow the use of the AWS WAF.
 
 ### Code Quality
 I do not have a developer background (c++/php at University doesn't count much for me) but I've worked extensively with native Linux scripting languages (bash & python and a little bit less of perl/ruby/groovy). I try to keep the code dry and clean as possible but it's not always the case with Terraform (a concrete example would be the limitations in this very project when defining tags for the autoscaling group ;a set of map of strings is required causing duplication). 
@@ -164,7 +164,7 @@ Given time, I would
     * building the infrastructure
     * handle traffic weight modifications
 2. Configure a scheduled policy for the autoscaling to increase the max and minimum instance by 1 every day during LUW and then scale back to the usual configuration. This would recycle instances everyday, ensuring vulnerabilities are cleared.
-3. Add an EFS mount for each ASG and build a pipeline that pushes new code on that EFS mount
+3. Add an EFS mount for each ASG and build a pipeline that pushes new code on the EFS mounts
 
 ### Network diagram
 
