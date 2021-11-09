@@ -15,7 +15,7 @@ CREDENTIALS_FILE                    = "~/.aws/credentials"
 CIDR_BLOCK                          = "10.77" #creates a 10.77.0.0/16
 
 #my public IP
-MY_IP                               = "102.160.235.159"
+MY_IP                               = "102.162.3.221"
 
 #project tags
 KEY_TAGS                            = {

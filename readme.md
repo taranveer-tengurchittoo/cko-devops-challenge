@@ -43,12 +43,14 @@ Before testing it on your AWS account, make sure that:
 ### To create the infrastructure:
 ```sh
 cd project
+export AWS_PROFILE={your_profile}
 bash bootstrap.sh -c
 ```
 
 ### To clean up the infrastructure:
 ```sh
 cd project
+export AWS_PROFILE={your_profile}
 bash bootstrap.sh -d
 ```
 
