@@ -158,16 +158,17 @@ Given time, I would
 1. I've made use of a bash script to bootstrap the project
 2. The script creates the AWS secret, generates a hash and uploads it for future use
 3. The script creates an SSH key pair for the project
-4. Use a script to rotate the database password
-5. Create a pipeline that builds a packer AMI with pre-installed php, apache, wordpress and latest OS updates
+4. Userdata renames the instance and installs the prerequisites needed (LAMP)
 
 Given time, I would 
-1. Use a jenkins pipeline 
+1. Use a script to rotate the database password
+2. Create a pipeline that builds a packer AMI with pre-installed php, apache, wordpress and latest OS updates
+3. Use a jenkins pipeline 
     * for building a packer AMI
     * building the infrastructure
     * handle traffic weight modifications
-2. Configure a scheduled policy for the autoscaling to increase the max and minimum instance by 1 every day during LUW and then scale back to the usual configuration. This would recycle instances everyday, ensuring vulnerabilities are cleared.
-3. Add an EFS mount for each ASG and build a pipeline that pushes new code on the EFS mounts
+4. Configure a scheduled policy for the autoscaling to increase the max and minimum instance by 1 every day during LUW and then scale back to the usual configuration. This would recycle instances everyday, ensuring vulnerabilities are cleared.
+5. Add an EFS mount for each ASG and build a pipeline that pushes new code on the EFS mounts
 
 ### Network diagram
 
